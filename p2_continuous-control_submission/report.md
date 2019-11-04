@@ -28,11 +28,12 @@ solve the environment with 20 agents: the environment is considered solved, when
  The algorithm I have used is an implementation of Udacity's DDGP algorithm, Deep Deterministic Policy Gradient with Soft Updates and an Experience Replay, presented in the paper [Continuous control with deep reinforcement learning](https://arxiv.org/pdf/1509.02971.pdf).
 
  The actor-critic model:
+ 
  Actor model:
  - input is the state size of 33 units 
  - 2 linear layers with 2 hidden layers of 400 and 300 units with a RELU activation
  - output layer: 4 units, output 4 values for the action between -1 and 1 through a tanh activation
- The algorithm
+ 
  Critic network 
  - input is the state size of 33 units 
  - 2 linear layers with 3 hidden layers of 400 and 300 units with a RELU activation
