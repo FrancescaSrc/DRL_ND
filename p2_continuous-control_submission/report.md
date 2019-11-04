@@ -49,20 +49,17 @@ Agent hyperparameters:
 - LR = 0.00078            # learning rate 
 
 
-### The DDGP algorithm
+### Description of the DDGP algorithm
 
-	The environment generates one brain which runs 20 agents.
-	One instance of the agent is created with the given hyperparameters. The same object is used for all 20 agents since the agents are exactly the same. The instance of the agent initiates 4 neural networks: actor local, actor target, critic local, critic target. 
-	The act function inputs the state to the actor local network, add noise and returns a given state (between -1 and 1). 
-	The action is sent to the environment which generates the next states and rewards. 
-	The step function is called which will create an experience replay buffer from which to sample.
-	When the memory reaches more than 512 units (batch size) after 20 time steps, the agent will sample from this memory and call the learn function to update the policy and value parameters using the batch of experience tuples and a discount factor gamma.
-	The learn step will compute the Q targets, the rewards and the critic loss, then calculate the loss of the actor prediction and back propagate. After the update of the target networks, the target parameters will be copied into the local network to integrate them slowly into the local network parameters. This is done with the soft update function using a tau rate of 0.5%.
-	At the end of each loop, the rewards are added to the score array and the average metrics are calculated: per episode, per 100 episodes and the performance average (moving avg) is printed. When the performance reaches the score of 30 the environment is solved and the weights are saved.
+The environment generates one brain which runs 20 agents.
+One instance of the agent is created with the given hyperparameters. The same object is used for all 20 agents since the agents are exactly the same. The instance of the agent initiates 4 neural networks: actor local, actor target, critic local, critic target. 
+The act function inputs the state to the actor local network, add noise and returns a given state (between -1 and 1). 
+The action is sent to the environment which generates the next states and rewards. 
+The step function is called which will create an experience replay buffer, a memory buffer. When the memory reaches more than 512 units (batch size) after 20 time steps, the agent will sample from this memory and call the learn function to update the policy and value parameters using the batch of experience tuples and a discount factor gamma.
+The learn step will compute the Q targets, the rewards and the critic loss, then calculate the loss of the actor prediction and back propagate. After the update of the target networks, the target parameters will be copied into the local network to integrate them slowly into the local network parameters. This is done with the soft update function using a tau rate of 0.5%.
+At the end of each loop, the rewards are added to the score array and the average metrics are calculated: per episode, per 100 episodes and the performance average (moving avg) is printed. When the performance reaches the score of 30 the environment is solved and the weights are saved.
 
 	
-
-
 ### Plot of Rewards
 **My environment was solved in 9 episodes!** (but took at least 7.5 hours to train)
 
