@@ -12,13 +12,13 @@ This project uses [Reacher](https://github.com/Unity-Technologies/ml-agents/blob
 ![Trained Agent][image1]
 
 Description of the environment:
-agent: a double-jointed arm that moves to target locations. 
-reward:  +0.1 for each step that the agent's hand is in the goal location. 
-goal: the agent maintains its position at the target location for as many time steps as possible.
+- agent: a double-jointed arm that moves to target locations. 
+- reward:  +0.1 for each step that the agent's hand is in the goal location. 
+- goal: the agent maintains its position at the target location for as many time steps as possible.
 observation space: 33 variables corresponding to position, rotation, velocity, and angular velocities of the arm. 
-action: a vector with four numbers, corresponding to torque applicable to two joints. Every entry in the action vector should be a number between -1 and 1.
-solve the environment with one agent: the agent must get an average score of +30 over 100 consecutive episodes
-solve the environment with 20 agents: the environment is considered solved, when the average (over 100 episodes) of those average scores is at least +30. 
+- action: a vector with four numbers, corresponding to torque applicable to two joints. Every entry in the action vector should be a number between -1 and 1.
+- solve the environment with one agent: the agent must get an average score of +30 over 100 consecutive episodes
+- solve the environment with 20 agents: the environment is considered solved, when the average (over 100 episodes) of those average scores is at least +30. 
 
 ### Training versions
 
