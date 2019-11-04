@@ -1,5 +1,5 @@
 
-[image1]: assets/graph_testresults.jpg
+[image1]: plot_rewards.jpg
 
 # Report for Project 2 - Continuous Control - Deep Reinforcement Learning Nanodegree
 
@@ -63,7 +63,7 @@ At the end of each loop, the rewards are added to the score array and the averag
 ### Plot of Rewards
 **My environment was solved in 9 episodes!** (but took at least 7.5 hours to train)
 
-![Plot of training scores][image4]
+![Plot of training scores][image1]
 
 
 ### My experiments and hyperparameters
