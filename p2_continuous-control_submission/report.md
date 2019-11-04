@@ -38,15 +38,6 @@ solve the environment with 20 agents: the environment is considered solved, when
  - 2 linear layers with 3 hidden layers of 400 and 300 units with a RELU activation
  - output layer: 1 unit, a Q_value  with a RELU activation
 
-### Hyperparameters
-
-Learning rate: 0.00078
-batch_size=256
-tau=0.005
-buffer_size=int(1e6)
-weight_decay=0
-gamma = 0.99
-
 ### Hyperparameters tuning
 
 Agent hyperparameters:
