@@ -85,7 +85,6 @@ The second version is useful for algorithms like [PPO](https://arxiv.org/pdf/170
 
     In some cases, you might also need to download and install swig for Windows. Swig is the abbreviation of Simplified Wrapper and Interface Generator, it can give script language such as python the ability to invoke C and C++ libraries interface method indirectly. Just follow the [instructions on swig installation on this site](https://www.dev2qa.com/how-to-install-swig-on-macos-linux-and-windows/)
 
-    Now open the `Navigation.ipynb` to get started with training your own agent!  
 
 
 Follow the instructions in `Continuous_Control.ipynb` to get started with training your own agent!  
