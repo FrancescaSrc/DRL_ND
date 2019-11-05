@@ -1,13 +1,11 @@
 
 [image1]: plot_rewards.jpg
 
-# Report for Project 2 - Continuous Control - Deep Reinforcement Learning Nanodegree
+## Report for Project 2 - Continuous Control - Deep Reinforcement Learning Nanodegree
 
 
 This report contains the details of the code used to solve the second project in Udacity's [Deep Reinforcement Learning Nanodegree](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893) program.  
 
-
-# Project 2: Continuous Control
 
 ### Description of the environment 
 
