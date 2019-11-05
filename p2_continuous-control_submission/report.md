@@ -96,6 +96,12 @@ The step function is called which will create an experience replay buffer, a mem
 ```
 
 The learn step will compute the Q targets, the rewards and the critic loss, then calculate the loss of the actor prediction and back propagate. After the update of the target networks, the target parameters will be copied into the local network to integrate them slowly into the local network parameters. This is done with the soft update function using a tau rate of 0.5%.
+```python
+# ----------------------- update target networks ----------------------- #
+        self.soft_update(self.critic_local, self.critic_target, self.tau)
+        self.soft_update(self.actor_local, self.actor_target, self.tau)   
+```
+
 At the end of each loop, the rewards are added to the score array and the average metrics are calculated: per episode, per 100 episodes and the performance average (moving avg) is printed. When the performance reaches the score of 30 the environment is solved and the weights are saved.
 
 	
