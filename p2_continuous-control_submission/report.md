@@ -34,10 +34,40 @@ solve the environment with 20 agents: the environment is considered solved, when
  - 2 linear layers with 2 hidden layers of 400 and 300 units with a RELU activation
  - output layer: 4 units, output 4 values for the action between -1 and 1 through a tanh activation
  
+```python
+# Actor Network (w/ Target Network)
+self.actor_local = Actor(state_size, action_size, random_seed).to(device)
+self.actor_target = Actor(state_size, action_size, random_seed).to(device)
+self.actor_optimizer = optim.Adam(self.actor_local.parameters(), lr=LR_ACTOR)
+
+#forward pass
+ def forward(self, state):
+        """Build an actor (policy) network that maps states -> actions."""
+        x = F.relu(self.bn1(self.fc1(state)))
+        x = F.relu(self.fc2(x))
+        return F.tanh(self.fc3(x))
+```
+ 
  Critic network:
  - input is the state size of 33 units 
  - 2 linear layers with 3 hidden layers of 400 and 300 units with a RELU activation
  - output layer: 1 unit, a Q_value  with a RELU activation
+ 
+ 
+```python
+# Critic Network (w/ Target Network)
+self.critic_local = Critic(state_size, action_size, random_seed).to(device)
+self.critic_target = Critic(state_size, action_size, random_seed).to(device)
+self.critic_optimizer = optim.Adam(self.critic_local.parameters(), lr=LR_CRITIC, weight_decay=WEIGHT_DECAY)
+
+#forward pass
+def forward(self, state, action):
+        """Build a critic (value) network that maps (state, action) pairs -> Q-values."""
+        xs = F.relu(self.bn1(self.fcs1(state)))
+        x = torch.cat((xs, action), dim=1)
+        x = F.relu(self.fc2(x))
+        return self.fc3(x)
+```
 
 ### Hyperparameters tuning
 
