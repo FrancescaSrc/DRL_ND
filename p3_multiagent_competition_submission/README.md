@@ -13,8 +13,8 @@ This is the last project, of Udacity's Deep Reinforcement Learning Nanodegree. T
 ![Trained Agent][image1]
 
 Two agents control rackets to bounce a ball over a net. 
-Reward: +0.1 if an agent hits the ball over the net and -0.1 if an agent lets a ball hit the ground or hits the ball out of bounds
-The goal of each agent is to keep the ball in play.
+
+Reward: +0.1 if an agent hits the ball over the net and -0.1 if an agent lets a ball hit the ground or hits the ball out of bounds. The goal of each agent is to keep the ball in play.
 
 Observation space: 8 variables corresponding to the position and velocity of the ball and racket. Each agent receives its own, local observation.  Two continuous actions are available, corresponding to movement toward (or away from) the net, and jumping. 
 
