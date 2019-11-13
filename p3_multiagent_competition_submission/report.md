@@ -102,7 +102,7 @@ The learn step will compute the Q targets, the rewards and the critic loss, then
         self.soft_update(self.actor_local, self.actor_target, self.tau)   
 ```
 
-At the end of each loop, the scores are added to the score array and the maximum score is kept to calculate the metrics over the last 100 episodes and the performance average score is printed. When the performance reaches the score of 0.5 the environment is solved and the weights of the neural network are saved.
+At the end of each loop, the scores are added to the score array and the maximum score is saved in a new array to calculate the metrics over the last 100 episodes and print the average score. When the performance reaches the average score of +0.5 the environment is solved and the weights of the neural networks are saved.
 
 	
 ### Plot of Rewards
