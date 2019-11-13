@@ -127,7 +127,7 @@ At the end of each loop, the scores are added to the score array and the maximum
 ### Ideas for Future Work
 
  - I have tried to implement another algorithms such as the Proximal Policy Optimization but did not succeed (yet in time), due to project deadline
- In the future, I would like to try: 
+Next future steps: 
  - Priorized Experience Replay, Asynchronous Actor-Critic Agents (A3C)
  - Deep Neuroevolution for Reinforcement Learning: which seems a good solution without the gradient decent problems, see https://towardsdatascience.com/reinforcement-learning-without-gradients-evolving-agents-using-genetic-algorithms-8685817d84f, see here is the original code: https://github.com/paraschopra/deepneuroevolution
 
