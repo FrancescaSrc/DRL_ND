@@ -58,7 +58,7 @@ The environment is considered solved, when the average (over 100 episodes) of th
     - Next, install the **classic control** environment group by following the instructions [here](https://github.com/openai/gym#classic-control).
     - Then, install the **box2d** environment group by following the instructions [here](https://github.com/openai/gym#box2d).
     - If you encounter any issue with installing the mlagents, try installing the swing module first, then the box2d and the mlagents
-    - you can also use the requirements.txt file included in this repository, run it in your environment with:
+    - you can also use the requirements.txt file included in [this repository] (https://github.com/FrancescaSrc/DRL_ND/tree/master/p1_navigation_submission), run it in your environment with:
     ```(env_name)$ pip install -r requirements.txt```
   or 
     ```pip install -r requirements.txt```
