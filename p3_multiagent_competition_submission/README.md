@@ -65,12 +65,12 @@ The environment is considered solved, when the average (over 100 episodes) of th
     ```bash
     pip install -r requirements.txt```
     
-    Manual installation of mlagents:
-    - git clone https://github.com/Unity-Technologies/ml-agents
-    - cd ml-agents
-    - pip install mlagents
-
-    In some cases, you might also need to download and install swig for Windows. Swig is the abbreviation of Simplified Wrapper and Interface Generator, it can give script language such as python the ability to invoke C and C++ libraries interface method indirectly. Just follow the [instructions on swig installation on this site](https://www.dev2qa.com/how-to-install-swig-on-macos-linux-and-windows/)
+ Manual installation of mlagents:
+   - git clone https://github.com/Unity-Technologies/ml-agents
+   - cd ml-agents
+   - pip install mlagents
+   
+In some cases, you might also need to download and install swig for Windows. Swig is the abbreviation of Simplified Wrapper and Interface Generator, it can give script language such as python the ability to invoke C and C++ libraries interface method indirectly. Just follow the [instructions on swig installation on this site](https://www.dev2qa.com/how-to-install-swig-on-macos-linux-and-windows/)
 
 
 
