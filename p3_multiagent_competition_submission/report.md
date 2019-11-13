@@ -10,23 +10,26 @@ This report contains the details of the code used to solve the third project in 
 ### Description of the project and the environment 
 
 Project: build a reinforcement learning agent that controls rackets to bounce a ball over a net within the Unity Tennis environment. The goal of each agent is to keep the ball in play.
-Final goal: to solve the environment, your agents must get an average score of +0.5 (over 100 consecutive episodes, after taking the maximum over both agents).
-agent: controls a racket and moves in a continuous space
+
+Agent: controls a racket and moves in a continuous space
+
 Reward: +0.1 if an agent hits the ball over the net and -0.1 if an agent lets a ball hit the ground or hits the ball out of bounds
+
 Goal: the goal of each agent is to keep the ball in play.
+
 Observation space:  8 variables corresponding to the position and velocity of the ball and racket. 
 Each episode yields 2 (potentially different) scores, the maximum of these 2 scores is kept for average metrics.
 This single **max score** for each episode averaged on last 100 episodes should be over 0.5.
 
-## Goals
-solve the environment: the environment is considered solved, when **the average (over 100 episodes) of the max scores** is at least +0.5. 
+## Final goal
+The environment is considered solved, when **the average (over 100 episodes) of the max scores** is at least +0.5. 
 
 
 ## The model and the algorithm
 
- The algorithm I have used is an implementation of Udacity's DDGP algorithm, Deep Deterministic Policy Gradient with Soft Updates and an Experience Replay, presented in the paper [Continuous control with deep reinforcement learning](https://arxiv.org/pdf/1509.02971.pdf).
+The algorithm I have used is an implementation of Udacity's DDGP algorithm, Deep Deterministic Policy Gradient with Soft Updates and an Experience Replay, presented in the paper [Continuous control with deep reinforcement learning](https://arxiv.org/pdf/1509.02971.pdf).
 
- The actor-critic architecture:
+The actor-critic architecture:
  
  Actor network:
  - input is the state size of 24 units 
@@ -125,8 +128,9 @@ At the end of each loop, the scores are added to the score array and the maximum
 ### Ideas for Future Work
 
 The algorithm solves a simple game but if it were used for a more difficult task several improvements could be tried:
- - I have tried to implement another algorithm such as the PPO but did not succeed (yet due to project deadline)
- -  implementing Deep Neuroevolution for Reinforcement Learning: while searching for a solution to improve my agents performance, I came this article across: https://towardsdatascience.com/reinforcement-learning-without-gradients-evolving-agents-using-genetic-algorithms-8685817d84f
- which proposes a different approch, a genetic algorithm which  here is the original code: https://github.com/paraschopra/deepneuroevolution
+ - I have tried to implement another algorithm such as the Proximal Policy Optimization but did not succeed (yet), due to project deadline
+ Also I would like to try: 
+ - Priorized Experience Replay, Asynchronous Actor-Critic Agents (A3C)
+ - Deep Neuroevolution for Reinforcement Learning: which seems a good solution without the gradient decent problems, see https://towardsdatascience.com/reinforcement-learning-without-gradients-evolving-agents-using-genetic-algorithms-8685817d84f, see here is the original code: https://github.com/paraschopra/deepneuroevolution
 
 
