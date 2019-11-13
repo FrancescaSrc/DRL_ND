@@ -60,9 +60,9 @@ The environment is considered solved, when the average (over 100 episodes) of th
     - If you encounter any issue with installing the mlagents, try installing the swing module first, then the box2d and the mlagents
     - you can also use the requirements.txt file included in this repository, run it in your environment with:
     ```bash
-    (env_name)$ pip install -r requirements.txt
-    or 
-    bash
+    (env_name)$ pip install -r requirements.txt```
+  or 
+    ```bash
     pip install -r requirements.txt```
     
  Manual installation of mlagents:
