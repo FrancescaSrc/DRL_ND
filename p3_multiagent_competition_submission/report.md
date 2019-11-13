@@ -117,13 +117,12 @@ At the end of each loop, the scores are added to the score array and the maximum
  The two agents are just doing the same tasks working together and competing at the same time. The memory of experiences is important for both agents.
 
  I have made the following adjustments in the hyperparameters:
- - learning rate: I tried different lr rates but at the end my previous project rate of 0.00078 gave the best results
- - batch size: a bigger batch size gave a better training, I set it to 512 and the training was quite fast even with the cpu. 
- - memory buffer: I double the size of the buffer 2.000.000 and this made a huge difference
- - tau value for soft update: changing the tau value has made a huge difference in how quickly the network converged. I have started with a tau value of 0.005 and the environment was resolved in 400/500 epochs. By increasing the value to a max of 0.009, the environment was solved in 200 epoch less, this because the value allows the local network to merge with the target a bit faster. 
- - network size: I added a new layer and tried to change the number of units but did not see any improvements, the training took a lot longer
- I increased the units to 500 for the first layer and added some more batch normalization.
- - batch normalization: I have applied normalization on the first and second layer. 
+ - **learning rate**: I tried different lr rates but at the end my previous project rate of 0.00078 gave the best results
+ - **batch size**: a bigger batch size gave a better training, I set it to 512 and the training was quite fast even with the cpu. 
+ - **memory buffer**: I double the size of the buffer 2.000.000 and this made a huge difference
+ - **tau value** for soft update: changing the tau value was key, my network converged more quickly. I have started with a tau value of 0.005 and the environment was resolved in 400/500 epochs. By increasing the value to a max of 0.009, the environment was solved in 200 epoch less, this because the value allows the local network to merge with the target a bit faster. Higher values did not resulted in a better score.
+ - **network size**: I tried to add a new layer but made no difference. I increased the number of units to 500 for the first layer and added some more batch normalization.
+ - **batch normalization**: I have applied normalization on the first and second layer. 
 
 ### Ideas for Future Work
 
