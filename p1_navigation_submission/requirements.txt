@@ -23,7 +23,7 @@ glfw==1.8.3
 grpcio==1.11.0
 gym==0.14.0
 h5py==2.10.0
-html5lib==0.9999999
+html5lib==0.999999999
 imageio==2.5.0
 importlib-metadata==0.23
 ipykernel==5.1.2
